@@ -16,8 +16,8 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav me-auto">
-        <a class="nav-link active" aria-current="page" href="{{url_for('home_page')}}">Home</a>
-        <a class="nav-link" href="{{url_for('product_page')}}">Produtos</a>
+        <a class="nav-link" aria-current="page" href="{{url_for('home_page')}}">Home</a>
+        <a class="nav-link active" href="{{url_for('product_page')}}">Produtos</a>
       </div>
       <div class="navbar-nav ms-auto">
         <a class="nav-link" href="#">Login</a>
@@ -36,6 +36,8 @@
                 <th scope="col">Nome</th>
                 <th scope="col">Cod Barra</th>
                 <th scope="col">Preço</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">Ações</th>
             </tr>
         </thead>
         <tbody>
@@ -45,6 +47,11 @@
                     <td>{{item.nome}}</td>
                     <td>{{item.cod_barra}}</td>
                     <td>{{item.preco}}</td>
+                    <td>{{item.descricao}}</td>
+                    <td>
+                    <button class="btn btn-outline btn-info">Mais informações</button>
+                    <button class="btn btn-outline btn-success">Comprar esse produto</button>
+                    </td>
                 </tr>
             {%endfor%}
         </tbody>
@@ -58,5 +65,4 @@
         color:white;
     }
 </style>
-
 </html>
